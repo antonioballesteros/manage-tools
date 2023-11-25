@@ -1,43 +1,43 @@
 [
     {
-        "id": 1,
+        "id": "0fe431c6-2fa8-4514-b76c-300cbb774d66",
         "name": "AA",
         "align": "left",
-        "products": [1]
+        "products": ["5662d141-46e4-4df2-9e6e-e08d67136e93"]
     }, {
-        "id": 2,
+        "id": "79dbd6c7-21a0-4807-b7ca-6683501185b4",
         "name": "BB",
         "align": "center",
-        "products": [2, 3]
+        "products": ["c3b9d4ab-b257-46e3-9f49-ccbf26613dc1", "eced08da-3569-46ff-a920-937ccfe397d3"]
     }, {
-        "id": 3,
+        "id": "f693b9ff-d802-4589-aaff-7dc9725db27f",
         "name": "CC",
         "align": "right",
-        "products": [4, 5]
+        "products": ["0e0e1c48-6b1e-4feb-b177-a028ab80bfdb", "c28688bc-5949-4140-8ff8-acdf5c4d4ac3"]
     }, {
-        "id": 4,
-        "name": "AA",
+        "id": "96a96a0c-f28d-4d5c-a44c-91679f4dcb75",
+        "name": "DD",
         "align": "left",
-        "products": [6]
+        "products": ["2e3e9205-3f89-4f48-8391-8393696b7c52"]
     }, {
-        "id": 5,
-        "name": "BB",
+        "id": "5907c3ee-5d57-470c-bb42-b4ae8bab468b",
+        "name": "EE",
         "align": "center",
-        "products": [7, 8]
+        "products": ["c594c103-cad3-45b5-9797-55c65e0637c9", "72674506-55af-403d-a779-3dd0da78fa3e"]
     }, {
-        "id": 6,
-        "name": "CC",
+        "id": "4049a45f-b18e-4663-9017-22ab831394e3",
+        "name": "FF",
         "align": "right",
-        "products": [9, 10, 11]
+        "products": ["9cc96788-1c2d-4389-a73c-0af7e7ebdf14", "672b0771-1894-4bd4-b5e0-f5c3e44eec4a", "19d50f17-4b2f-4328-8813-ceff107f91b1"]
     }, {
-        "id": 5,
-        "name": "BB",
+        "id": "72188ed9-33e4-483d-9a75-26096f28faa9",
+        "name": "GG",
         "align": "center",
-        "products": [12, 13]
+        "products": ["dde85d74-52fd-4aa0-8ddc-8c371a8e4dfc", "6f15a07f-6ccc-426f-a628-0cac16c6ae70"]
     }, {
-        "id": 6,
-        "name": "CC",
+        "id": "2fa08d9e-64f1-4e2d-9d2f-cef41cf9b2d0",
+        "name": "HH",
         "align": "right",
-        "products": [14, 15]
+        "products": ["809b6e78-7290-4439-b71b-3dd10e551548", "6588cd64-051f-46ed-abcc-63fe4378e27a"]
     }
 ]

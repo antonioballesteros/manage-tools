@@ -1,18 +1,18 @@
 [
     {
-        "id": 1,
+        "id": "0fe431c6-2fa8-4514-b76c-300cbb774d66",
         "name": "AA",
         "align": "left",
-        "products": [1]
+        "products": ["5662d141-46e4-4df2-9e6e-e08d67136e93"]
     }, {
-        "id": 2,
+        "id": "79dbd6c7-21a0-4807-b7ca-6683501185b4",
         "name": "BB",
         "align": "center",
-        "products": [2, 3]
+        "products": ["c3b9d4ab-b257-46e3-9f49-ccbf26613dc1", "eced08da-3569-46ff-a920-937ccfe397d3"]
     }, {
-        "id": 3,
+        "id": "f693b9ff-d802-4589-aaff-7dc9725db27f",
         "name": "CC",
         "align": "right",
-        "products": [4, 5, 6]
+        "products": ["0e0e1c48-6b1e-4feb-b177-a028ab80bfdb", "c28688bc-5949-4140-8ff8-acdf5c4d4ac3", "2e3e9205-3f89-4f48-8391-8393696b7c52"]
     }
 ]

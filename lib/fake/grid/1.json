@@ -1,8 +1,8 @@
 [
     {
-        "id": 1,
+        "id": "0fe431c6-2fa8-4514-b76c-300cbb774d66",
         "name": "AA",
         "align": "left",
-        "products": [1, 2]
+        "products": ["5662d141-46e4-4df2-9e6e-e08d67136e93", "c3b9d4ab-b257-46e3-9f49-ccbf26613dc1"]
     }
 ]

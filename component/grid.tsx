@@ -1,6 +1,6 @@
 "use client";
 
-import { Align, Row } from "@/lib/grid";
+import { Row } from "@/lib/grid";
 import {} from "@/lib/grid";
 import RowCard from "@/ui/row-card";
 import { useState } from "react";

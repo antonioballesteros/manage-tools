@@ -36,7 +36,7 @@ export default function RowCard({
           <ProductCard key={product.id} product={product} />
         ))}
       </div>
-      <div className="flex flex-col ml-10 flex-grow max-w-[350px]">
+      <div className="flex flex-col ml-10 flex-grow max-w-[420px]">
         <h3 className="font-bold">Row: {row.id}</h3>
         <h4 className="text-sm">Align</h4>
         <TripleToggleSwitch onChange={onChange} row={row} />

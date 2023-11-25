@@ -7,23 +7,23 @@ export enum Align  {
 }
 
 export interface Row  {
-    id: number;
+    id: string;
     name: string;
     align: Align;
     products: Array<Product>;
 }
 
 interface DbRow {
-    id: number;
+    id: string;
     name: string;
      align: Align;
-     products: Array<number>
+     products: Array<string>
 }
 
 export const getGrid = async (id: string):Promise<Array<Row>>  => {
     const data = require(`./fake/grid/${id}.json`);
 
-    const productIdList = data.reduce((products : Array<number>, row:DbRow ) => {
+    const productIdList = data.reduce((products : Array<string>, row:DbRow ) => {
         return products.concat(row.products);
     }, [])
 
