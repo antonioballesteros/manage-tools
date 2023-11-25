@@ -1,0 +1,43 @@
+[
+    {
+        "id": 1,
+        "name": "AA",
+        "align": "left",
+        "products": [1]
+    }, {
+        "id": 2,
+        "name": "BB",
+        "align": "center",
+        "products": [2, 3]
+    }, {
+        "id": 3,
+        "name": "CC",
+        "align": "right",
+        "products": [4, 5]
+    }, {
+        "id": 4,
+        "name": "AA",
+        "align": "left",
+        "products": [6]
+    }, {
+        "id": 5,
+        "name": "BB",
+        "align": "center",
+        "products": [7, 8]
+    }, {
+        "id": 6,
+        "name": "CC",
+        "align": "right",
+        "products": [9, 10, 11]
+    }, {
+        "id": 5,
+        "name": "BB",
+        "align": "center",
+        "products": [12, 13]
+    }, {
+        "id": 6,
+        "name": "CC",
+        "align": "right",
+        "products": [14, 15]
+    }
+]

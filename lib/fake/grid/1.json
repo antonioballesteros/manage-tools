@@ -1,0 +1,8 @@
+[
+    {
+        "id": 1,
+        "name": "AA",
+        "align": "left",
+        "products": [1, 2]
+    }
+]
