@@ -25,6 +25,10 @@ export default function RowCard({
   row: Row;
   onChange: Function;
 }) {
+  const onUpdateName = (e: any) => {
+    onChange({ ...row, name: e.target.value });
+  };
+
   return (
     <div className="flex">
       <div className={clsx("flex w-[648px]", align(row.align))}>
@@ -32,9 +36,21 @@ export default function RowCard({
           <ProductCard key={product.id} product={product} />
         ))}
       </div>
-      <div className="flex flex-col ml-10">
+      <div className="flex flex-col ml-10 flex-grow max-w-[350px]">
         <h3 className="font-bold">Row: {row.id}</h3>
-        <TripleToggleSwitch onChange={onChange} align={row.align} id={row.id} />
+        <h4 className="text-sm">Align</h4>
+        <TripleToggleSwitch onChange={onChange} row={row} />
+        <h4 className="text-sm mt-2">Name</h4>
+        <input
+          value={row.name}
+          onChange={onUpdateName}
+          className={clsx(
+            "rounded-md px-1",
+            !!row.name
+              ? "focus-visible:outline-green-600"
+              : "focus-visible:outline-red-600 outline-2 outline outline-red-600 focus-visible:bg-white bg-red-200"
+          )}
+        />
       </div>
     </div>
   );

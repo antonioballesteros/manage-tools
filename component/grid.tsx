@@ -10,14 +10,14 @@ export default function Grid({ grid: gridInit }: { grid: Row[] }) {
 
   console.log("grid", grid);
 
-  const onChange = (row: Row, value: Align) => {
+  const onChange = (updatedRow: Row) => {
     setGrid((prevGrid) => {
-      const newGrid = [...prevGrid];
-      const updatedRow: Row | undefined = newGrid.find((r) => r.id === row.id);
-      if (updatedRow) {
-        updatedRow.align = value;
-      }
-      return newGrid;
+      return prevGrid.map((row) => {
+        if (row.id === updatedRow.id) {
+          return updatedRow;
+        }
+        return row;
+      });
     });
   };
 
@@ -26,7 +26,7 @@ export default function Grid({ grid: gridInit }: { grid: Row[] }) {
       <RowCard
         key={row.id}
         row={row}
-        onChange={(value: Align) => onChange(row, value)}
+        onChange={(updatedRow: Row) => onChange(updatedRow)}
       />
     );
   });

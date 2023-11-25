@@ -6,7 +6,7 @@ https://codesandbox.io/p/sandbox/react-triple-toggle-forked-lpk2i5?file=%2Fsrc%2
 */
 import { useState } from "react";
 
-import { Align } from "@/lib/grid";
+import { Align, Row } from "@/lib/grid";
 
 // This should be a module, but I don't want to spend time translating it
 import "./triple-toggle-switch.css";
@@ -27,14 +27,14 @@ const labels = {
 };
 
 export default function TripleToggleSwitch({
-  id,
-  align,
+  row,
   onChange,
 }: {
-  id: number;
-  align: Align;
+  row: Row;
   onChange: Function;
 }) {
+  const { id, align } = row;
+
   const [switchPosition, setSwitchPosition] = useState(align);
   const [animation, setAnimation] = useState("");
 
@@ -56,7 +56,10 @@ export default function TripleToggleSwitch({
     }
     setAnimation(animation);
     setSwitchPosition(value);
-    onChange(value);
+    onChange({
+      ...row,
+      align: value,
+    });
   };
 
   return (
