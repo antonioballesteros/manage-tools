@@ -37,7 +37,7 @@ export const getTemplate = async (templateId: string):Promise<Template>  => {
     // Or if we could relate tables, some inner join to avoid the second query to load products
 
     await fakeDelay(500);    
-    const data = require(`./fake/templates/template-list.json`);
+    const data = require(`./fake/templates/grid-list.json`);
     const grid = data.filter((item:DbRow) => templateId === item.templateId);
 
     const productIdList = grid.reduce((products : Array<string>, row:DbRow ) => {
