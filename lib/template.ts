@@ -68,5 +68,5 @@ export const updateTemplate = async (formData: FormData) => {
     // - update grids in db
 
     await fakeDelay(1500);
-   // redirect('/');
+    redirect('/');
 }
