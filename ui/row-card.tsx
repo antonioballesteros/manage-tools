@@ -2,7 +2,7 @@
 
 import clsx from "clsx";
 
-import { Align, Row } from "@/lib/grid";
+import { Align, Row } from "@/lib/template";
 import ProductCard from "./product-card";
 import TripleToggleSwitch from "./triple-toggle-switch";
 import React from "react";

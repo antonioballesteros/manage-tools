@@ -6,7 +6,7 @@ https://codesandbox.io/p/sandbox/react-triple-toggle-forked-lpk2i5?file=%2Fsrc%2
 */
 import { useState } from "react";
 
-import { Align, Row } from "@/lib/grid";
+import { Align, Row } from "@/lib/template";
 
 // This should be a module, but I don't want to spend time translating it
 import "./triple-toggle-switch.css";
