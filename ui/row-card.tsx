@@ -5,7 +5,6 @@ import clsx from "clsx";
 import { Align, Row } from "@/lib/template";
 import ProductCard from "./product-card";
 import TripleToggleSwitch from "./triple-toggle-switch";
-import React from "react";
 
 const align = (align: Align): string | undefined => {
   if (align === Align.LEFT) {
@@ -22,21 +21,56 @@ const align = (align: Align): string | undefined => {
 export default function RowCard({
   row,
   onChange,
+  onDrag,
+  onDrop,
   children,
 }: {
   row: Row;
   onChange: Function;
+  onDrag: Function;
+  onDrop: Function;
   children?: React.ReactNode;
 }) {
   const onUpdateName = (e: any) => {
     onChange({ ...row, name: e.target.value });
   };
 
+  const onDragOver = (ev: any) => {
+    ev.preventDefault();
+  };
+
+  const onDropElement = (ev: any) => {
+    ev.preventDefault();
+    const getElementOrParentId = (target: HTMLElement | null): string => {
+      if (!target) {
+        return "";
+      }
+      if (target.id) {
+        return target.id;
+      }
+      if (target.parentElement) {
+        return getElementOrParentId(target.parentElement);
+      }
+      return "";
+    };
+
+    const dropRowId = getElementOrParentId(ev.target);
+    if (!dropRowId) {
+      return;
+    }
+    onDrop(dropRowId, ev.pageX);
+  };
+
   return (
     <div className="flex">
-      <div className={clsx("flex w-[648px] h-[348px]", align(row.align))}>
+      <div
+        id={row.id}
+        className={clsx("flex w-[648px] h-[348px]", align(row.align))}
+        onDrop={onDropElement}
+        onDragOver={onDragOver}
+      >
         {row.products.map((product) => (
-          <ProductCard key={product.id} product={product} />
+          <ProductCard key={product.id} product={product} onDrag={onDrag} />
         ))}
       </div>
       <div className="flex flex-col ml-10 flex-grow max-w-[420px]">

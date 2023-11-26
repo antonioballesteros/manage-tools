@@ -41,3 +41,8 @@ In any case, the information is not requested and we use mocketed data.
 
 Checking the design, seems the template has a name "Jeans". We should have another query to receive this.
 And maybe refactor a bit the logic to read templates + grid.
+
+### Drag and Drop
+
+The solution works, but it's not perfect. The drop only add items before or after, but no between items.
+Maybe a second iteration could fix this :)
