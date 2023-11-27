@@ -28,15 +28,15 @@ export default function RowCard({
   row,
   zoom,
   onChange,
-  onDrag,
-  onDrop,
+  onDragProduct,
+  onDropProduct,
   children,
 }: {
   row: Row;
   zoom: number;
   onChange: Function;
-  onDrag: Function;
-  onDrop: Function;
+  onDragProduct: Function;
+  onDropProduct: Function;
   children?: React.ReactNode;
 }) {
   const onUpdateName = (e: any) => {
@@ -66,7 +66,7 @@ export default function RowCard({
     if (!dropRowId) {
       return;
     }
-    onDrop(dropRowId, ev.pageX);
+    onDropProduct(dropRowId, ev.pageX);
   };
 
   const small = zoom < 75;
@@ -88,7 +88,7 @@ export default function RowCard({
           <ProductCard
             key={product.id}
             product={product}
-            onDrag={onDrag}
+            onDrag={onDragProduct}
             zoom={zoom}
           />
         ))}

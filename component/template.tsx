@@ -68,12 +68,12 @@ export default function Template({
     setUpdated(true);
   };
 
-  const onDrag = (ev: any, product: Product) => {
+  const onDragProduct = (ev: any, product: Product) => {
     setProductDrag(product);
     setDragStartX(ev.pageX);
   };
 
-  const onDrop = (destRowId: string, dropEndX: number) => {
+  const onDropProduct = (destRowId: string, dropEndX: number) => {
     const rightDirection = dropEndX > dragStartX;
     const origRowId = template.grid.find((g) => {
       return g.products.some((p) => p.id === productDrag!.id);
@@ -149,8 +149,8 @@ export default function Template({
               key={row.id}
               row={row}
               onChange={(updatedRow: Row) => onChange(updatedRow)}
-              onDrag={onDrag}
-              onDrop={onDrop}
+              onDragProduct={onDragProduct}
+              onDropProduct={onDropProduct}
               zoom={zoom}
             >
               <div

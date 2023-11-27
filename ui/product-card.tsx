@@ -32,7 +32,6 @@ export default function ProductCard({
     <div
       className="flex flex-col mr-4 w-[200px] cursor-pointer"
       style={getItemStyles(zoom)}
-      draggable={true}
       onDragStart={onDragStart}
     >
       <h2 className="p-1 text-xl font-semibold absolute top-0 w-full bg-white/50">
