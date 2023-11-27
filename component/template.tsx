@@ -9,6 +9,8 @@ import RowCard from "@/ui/row-card";
 import Button from "@/ui/button";
 import Actions from "./actions";
 import { Product } from "@/lib/products";
+import VerticalSlider from "@/ui/vertical-slider";
+import clsx from "clsx";
 
 export default function Template({
   template: templateInit,
@@ -19,6 +21,7 @@ export default function Template({
   const [updated, setUpdated] = useState(false);
   const [productDrag, setProductDrag] = useState<Product | null>(null);
   const [dragStartX, setDragStartX] = useState(0);
+  const [zoom, setZoom] = useState(100);
 
   const onChange = (updatedRow: Row) => {
     setTemplate((prevTemplate) => {
@@ -129,32 +132,50 @@ export default function Template({
     }
   };
 
+  const onZoom = (value: number) => setZoom(value);
+
   return (
-    <div className="flex flex-col">
-      {template.grid.map((row) => {
-        return (
-          <RowCard
-            key={row.id}
-            row={row}
-            onChange={(updatedRow: Row) => onChange(updatedRow)}
-            onDrag={onDrag}
-            onDrop={onDrop}
-          >
-            <div className="mt-4 rounded-md border-2 border-black p-4">
-              <Button onClick={() => onCreate(row)} className="mr-4">
-                Create new Grid
-              </Button>
-              <Button
-                onClick={() => onRemove(row)}
-                disabled={!!row.products.length}
+    <div className="flex">
+      <VerticalSlider
+        value={zoom}
+        onChange={onZoom}
+        className="mr-4 w-[64px] h-[300px]"
+      />
+
+      <div className="flex flex-col">
+        {template.grid.map((row) => {
+          return (
+            <RowCard
+              key={row.id}
+              row={row}
+              onChange={(updatedRow: Row) => onChange(updatedRow)}
+              onDrag={onDrag}
+              onDrop={onDrop}
+              zoom={zoom}
+            >
+              <div
+                className={clsx(
+                  zoom < 75
+                    ? "mt-1 p-1"
+                    : "mt-4 rounded-md border-2 border-black p-4",
+                  zoom < 40 && "hidden"
+                )}
               >
-                Remove this Grid
-              </Button>
-            </div>
-          </RowCard>
-        );
-      })}
-      <Actions updated={updated} template={template} />
+                <Button onClick={() => onCreate(row)} className="mr-4">
+                  Create new Grid
+                </Button>
+                <Button
+                  onClick={() => onRemove(row)}
+                  disabled={!!row.products.length}
+                >
+                  Remove this Grid
+                </Button>
+              </div>
+            </RowCard>
+          );
+        })}
+        <Actions updated={updated} template={template} />
+      </div>
     </div>
   );
 }

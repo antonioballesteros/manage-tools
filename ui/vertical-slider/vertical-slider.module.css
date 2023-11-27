@@ -1,0 +1,10 @@
+.inputRange {
+  -webkit-appearance: none;
+  height: 100%;
+  width: 100%;
+  border-radius: 5px;
+  background: #ccc;
+  outline: none;
+  writing-mode: bt-lr; /* IE */
+  -webkit-appearance: slider-vertical; /* WebKit */
+}

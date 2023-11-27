@@ -27,6 +27,10 @@ Has not been fully tested
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
+## How works
+
+Open the page and select one of the options available
+
 ## Important
 
 ### Sql instead fetch
@@ -46,3 +50,11 @@ And maybe refactor a bit the logic to read templates + grid.
 
 The solution works, but it's not perfect. The drop only add items before or after, but no between items.
 Maybe a second iteration could fix this :)
+
+### Scale
+
+I've created a range input slider to manage the scale from 100% -> 20%
+It will hide the options when the scale display the items small.
+75% remove some items
+40% hide whole options
+The scale is reseted when the user reload or change the page
