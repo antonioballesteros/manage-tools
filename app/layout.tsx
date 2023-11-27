@@ -22,8 +22,7 @@ export default function RootLayout({
           <Link href="/" className="text-xl font-bold">
             Tool editor
           </Link>
-
-          <main className="flex flex-col px-24 pt-2">{children}</main>
+          <main className="flex flex-col px-8 pt-2">{children}</main>
         </div>
       </body>
     </html>

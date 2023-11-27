@@ -1,5 +1,7 @@
 "use client";
 
+import Link from "next/link";
+
 import Button from "@/ui/button";
 import { updateTemplate } from "@/lib/template";
 import { Template } from "@/lib/template";
@@ -20,6 +22,9 @@ export default function Actions({
         <input type="hidden" name="template" value={JSON.stringify(template)} />
         <Button type="submit" disabled={!updated || invalid}>
           Save
+        </Button>
+        <Button className="ml-4">
+          <Link href="/">Cancel</Link>
         </Button>
       </form>
     </div>

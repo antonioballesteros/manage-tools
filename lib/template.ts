@@ -60,7 +60,7 @@ export const getTemplate = async (templateId: string):Promise<Template>  => {
 export const updateTemplate = async (formData: FormData) => {  
     const templateStringified = formData.get('template') as  string || "{}";    
     const template = JSON.parse(templateStringified);
-    console.log("updateTemplate", template);
+    console.log("Fake updateTemplate", template);
 
     // WITHOUT FAKE DATE: this should be something like that
     // - add new grids to db
