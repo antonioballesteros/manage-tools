@@ -31,6 +31,8 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 Open the page and select one of the options available
 
+![Screenshot ](/public/images/screenshot.png)
+
 ## Important
 
 ### Sql instead fetch
@@ -58,3 +60,13 @@ It will hide the options when the scale display the items small.
 75% remove some items
 40% hide whole options
 The scale is reseted when the user reload or change the page
+
+## Missing
+
+1. Allow to move row is not implemented, maybe a second iteration
+2. Tests, a third iteration :)
+3. Mobile or at least tablet responsive layout
+
+## Contact
+
+It should be nice to improve it
